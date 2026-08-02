@@ -46,6 +46,12 @@ ul{
   margin-left: 0;       
 }
 
+button{
+    cursor: pointer;
+    margin-right:8px ;
+    vertical-align: top;
+}
+
 .wrapper {
     background: #174372;
     max-width: 960px;
@@ -209,6 +215,21 @@ ul{
     font-weight: 500;
 }
 
+.skill-list{
+    list-style-type: disc;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.skill-list-item{
+    margin-bottom: 10px;
+}
+
+.skillset h3 {
+    color: #1d5898;
+}
+
 .main-wrapper .time {
     position: absolute;
     right: 0;
@@ -232,29 +253,12 @@ ul{
     margin-bottom: 30px;
 }
 
-.main-wrapper .projects-section .item {
-    margin-bottom: 15px;
+.project .project-header h3{
+    color:#1d5898;
+    font-size: 17px;
 }
-
-.skillset .item {
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-
-.skillset .level-title {
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-.skillset .level-bar {
-    height: 12px;
-    background: #adc7e5d6;
-}
-
-.skillset .level-bar-inner {
-    height: 12px;
-    background: #5599e6d6;
+.project .project-header a{
+    color:#1862b1;
 }
 
 .footer {
@@ -268,10 +272,68 @@ ul{
     font-size: 13px;
 }
 
+.download-button{
+    background-color: rgb(212, 80, 14);
+    color: white;
+    font-weight: bold;
+    height: 36px;
+    width: 130px;
+    border:none;
+    border-radius: 18px;
+    font-size: 15px;
+    transition: box-shadow 0.15s;
+    margin-left: 70%;
+    margin-bottom: 25px;
+}
+
+.download-button:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.15);
+}
+
+.skillset {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+.skillset > div {
+    flex: 1;
+}
+
+.skillset h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #1d4f91;
+}
+
+.skill-list {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.skill-list li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+}
+
+.project {
+    margin-bottom: 0;
+}
+
 
 /* Extra small devices (phones, less than 768px) */
 
 @media (max-width: 767px) {
+    .skillset {
+        flex-direction: column;
+        gap: 15px;
+    }
     .sidebar-wrapper {
         position: static;
         width: inherit;
@@ -287,8 +349,10 @@ ul{
     .main-wrapper .upper-row {
         margin-bottom: 0;
     }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
-
 
 /* Small devices (tablets, 768px and up) */
 
